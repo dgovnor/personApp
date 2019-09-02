@@ -93,3 +93,16 @@ exports.removeUser = (req, res) => {
       console.log("Error" + e);
     });
 };
+
+exports.getUser = (req, res) => {
+  Users.findAll({})
+    .then(data => {
+      return res.status(200).json({
+        status: 200,
+        message: data
+      });
+    })
+    .catch(err => {
+      console.log(err);
+    });
+};
