@@ -5,7 +5,7 @@ const {
   updateUser,
   getUser,
   removeUser
-} = require("./userHandle/users");
+} = require("./userController/users");
 const app = express();
 const port = process.env.PORT || "8000";
 
